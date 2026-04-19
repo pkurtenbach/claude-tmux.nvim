@@ -201,7 +201,7 @@ function provider.open(cmd_string, env_table, effective_config, focus)
   -- Using -P to print pane info and -F to format it
   local new_pane_id = tmux_cmd(
     string.format(
-      "split-window -v -l %d%% -P -F '#{pane_id}' '%s'",
+      "split-window -h -l %d%% -P -F '#{pane_id}' '%s'",
       split_size,
       full_cmd:gsub("'", "'\\''")
     )
